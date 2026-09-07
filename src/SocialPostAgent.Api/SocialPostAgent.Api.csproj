@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>SocialPostAgent.Api</RootNamespace>
+    <LangVersion>latest</LangVersion>
+    <UserSecretsId>socialpostagent-api-secrets</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Hangfire.AspNetCore" Version="1.8.14" />
+    <PackageReference Include="Hangfire.PostgreSql" Version="1.21.1" />
+    <PackageReference Include="Serilog.AspNetCore" Version="8.0.3" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.9.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SocialPostAgent.Domain\SocialPostAgent.Domain.csproj" />
+    <ProjectReference Include="..\SocialPostAgent.Application\SocialPostAgent.Application.csproj" />
+    <ProjectReference Include="..\SocialPostAgent.Infrastructure\SocialPostAgent.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>

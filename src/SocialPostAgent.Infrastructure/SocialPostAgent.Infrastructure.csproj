@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>SocialPostAgent.Infrastructure</RootNamespace>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Microsoft.Extensions.{Configuration,DependencyInjection}.Abstractions are
+         intentionally not pinned here — Microsoft.AspNetCore.DataProtection brings in
+         the versions it needs transitively; pinning an older version ourselves only
+         produces NU1605 downgrade errors against it. -->
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.11" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="8.0.10" />
+    <PackageReference Include="Microsoft.AspNetCore.DataProtection" Version="8.0.11" />
+    <PackageReference Include="Hangfire.Core" Version="1.8.14" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SocialPostAgent.Domain\SocialPostAgent.Domain.csproj" />
+    <ProjectReference Include="..\SocialPostAgent.Application\SocialPostAgent.Application.csproj" />
+  </ItemGroup>
+
+</Project>

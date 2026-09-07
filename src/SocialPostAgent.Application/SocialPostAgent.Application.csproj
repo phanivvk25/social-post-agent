@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>SocialPostAgent.Application</RootNamespace>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Microsoft.Extensions.{Logging.Abstractions,Options,DependencyInjection.Abstractions}
+         are intentionally not pinned here — Microsoft.SemanticKernel already brings in
+         the versions it needs transitively, and pinning an older version ourselves
+         only produces NU1605 downgrade errors against it. -->
+    <PackageReference Include="Microsoft.SemanticKernel" Version="1.80.0" />
+    <PackageReference Include="Microsoft.Extensions.Http" Version="8.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SocialPostAgent.Domain\SocialPostAgent.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

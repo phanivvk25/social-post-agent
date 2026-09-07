@@ -1,0 +1,21 @@
+## .NET
+bin/
+obj/
+*.user
+*.suo
+
+## IDE
+.vs/
+.vscode/
+*.swp
+
+## Generated content
+src/SocialPostAgent.Api/wwwroot/generated-images/*
+!src/SocialPostAgent.Api/wwwroot/generated-images/.gitkeep
+
+## Secrets — never commit real keys; use appsettings.Development.json overrides or user-secrets
+appsettings.*.local.json
+*.env
+
+.claude/*
+architecture-diagram/*

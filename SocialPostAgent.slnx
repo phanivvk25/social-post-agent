@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/SocialPostAgent.Api/SocialPostAgent.Api.csproj" />
+    <Project Path="src/SocialPostAgent.Application/SocialPostAgent.Application.csproj" />
+    <Project Path="src/SocialPostAgent.Domain/SocialPostAgent.Domain.csproj" />
+    <Project Path="src/SocialPostAgent.Infrastructure/SocialPostAgent.Infrastructure.csproj" />
+  </Folder>
+</Solution>

@@ -1,0 +1,16 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: social-post-agent-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: social_post_agent
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: CHANGE_ME
+    ports:
+      - "5432:5432"
+    volumes:
+      - social-post-agent-postgres-data:/var/lib/postgresql/data
+
+volumes:
+  social-post-agent-postgres-data:
